@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blonde Tattoo | Cristina Marin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1 class="logo-title">Blonde Tattoo</h1>
+        <div class="logo-subtitle">Cristina Marin | Tattoo Artist</div>
+        
+        <div class="lang-switch header-lang">
+            <button class="lang-btn active" data-lang="esp">ESP</button>
+            <button class="lang-btn" data-lang="cat">CAT</button>
+            <button class="lang-btn" data-lang="ing">ING</button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- VISTA PRINCIPAL (Home) -->
+        <div id="home-view">
+            <div class="hero-split">
+                <!-- Quién Soy -->
+                <section class="about-col">
+                    <div class="glass-panel text-panel">
+                        <h2 id="about-title">El Estudio</h2>
+                        <p id="about-text">
+                            Soy Cristina Marin, la artista detrás de Blonde Tattoo en Figueres. Me especializo en diseños únicos, prestando atención a cada detalle para que tu idea se convierta en una obra de arte en tu piel. Trabajo con las mejores medidas de higiene y un trato 100% personalizado para cada cliente.
+                        </p>
+                        <div class="signature">Cristina M.</div>
+                    </div>
+                </section>
+
+                <!-- Contacto y Enlaces -->
+                <section class="contact-col glass-panel text-panel">
+                    <h2 id="contact-title">Pásate por el estudio</h2>
+                    <p id="contact-desc" style="color: #bbb; font-size: 14px; margin-bottom: 20px;">
+                        La mejor forma de empezar tu próximo tatuaje es viéndonos en persona. Hablemos de tu idea, medidas y referencias.
+                    </p>
+                    
+                    <div class="info-block">
+                        <div class="info-item">
+                            <strong id="where-title">📍 Dónde estoy:</strong><br>
+                            <span id="where-text">C/ Sant Pau, 82, Figueres</span>
+                        </div>
+                        <div class="info-item" style="margin-top: 10px;">
+                            <strong id="schedule-title">🕒 Horario:</strong><br>
+                            <span id="schedule-text">Lunes a Sábado: 10:00 - 19:30</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/34669550169?text=¡Hola!%20He%20visto%20tu%20web%20y%20me%20gustaría%20pasarme%20por%20el%20estudio%20para%20hablar%20de%20un%20tatuaje." target="_blank" class="btn-whatsapp">
+                        <span id="whatsapp-btn-text">Contactar por WhatsApp</span>
+                    </a>
+
+                    <a href="https://instagram.com/blondetattoo" target="_blank" class="btn-instagram">
+                        <span id="ig-btn-text">Ver trabajos en Instagram</span>
+                    </a>
+                </section>
+            </div>
+
+            <!-- Pro Team -->
+            <section class="pro-team-section glass-panel text-panel" style="margin-bottom: 60px; text-align: center;">
+                <h2 id="proteam-title">Pro Team & Sponsors</h2>
+                <p id="proteam-desc" style="color: #bbb; font-size: 14px; margin-bottom: 20px;">Trabajo exclusivamente con los mejores materiales del sector para garantizar resultados perfectos en tu piel.</p>
+                <div class="sponsors-grid">
+                    <a href="https://instagram.com/black_mambo_needles" target="_blank" class="sponsor-link">✒️ Black Mambo Needles</a>
+                    <a href="https://instagram.com/sunninkofficial" target="_blank" class="sponsor-link">💧 Sunnink Official</a>
+                </div>
+            </section>
+
+            <!-- Especialidades -->
+            <section class="styles-section">
+                <h2 id="specialties-title">Especialidades</h2>
+                <p id="specialties-desc" style="text-align: center; font-size: 14px; margin-bottom: 25px; color: #aaa;">Explora mis diferentes estilos de trabajo</p>
+                
+                <div class="styles-grid">
+                    <!-- Fíjate que ahora usan data-gallery en vez de links a HTML -->
+                    <a href="#" class="style-card-link" data-gallery="fineline">
+                        <div class="style-box" style="background-image: url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=600&q=80');">
+                            <div class="style-box-overlay"><h3 id="style-1">Fine Line</h3></div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="style-card-link" data-gallery="microrealismo">
+                        <div class="style-box" style="background-image: url('https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=600&q=80');">
+                            <div class="style-box-overlay"><h3 id="style-2">Microrealismo</h3></div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="style-card-link" data-gallery="fullcolor">
+                        <div class="style-box" style="background-image: url('https://images.unsplash.com/photo-1589993358327-0466dfbfd6bc?auto=format&fit=crop&w=600&q=80');">
+                            <div class="style-box-overlay"><h3 id="style-3">Full Color</h3></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Carrusel -->
+            <section class="projects-section">
+                <h2 id="projects-title">Últimos Proyectos</h2>
+                <p id="projects-desc" style="text-align: center; font-size: 13px; margin-bottom: 20px; color: #aaa;">Haz clic o toca para pausar/reanudar</p>
+                <div class="carousel-container" id="carousel">
+                    <div class="project-card" style="background-image: url('https://images.unsplash.com/photo-1611501271487-ea953ebbb7db?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="project-card" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="project-card" style="background-image: url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="project-card" style="background-image: url('https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div class="project-card" style="background-image: url('https://images.unsplash.com/photo-1589993358327-0466dfbfd6bc?auto=format&fit=crop&w=400&q=80');"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTA GALERÍA (Se mostrará u ocultará con JavaScript) -->
+        <div id="gallery-view" class="hidden">
+            <div class="gallery-nav">
+                <button id="btn-back" class="nav-btn">← Volver al Inicio</button>
+                <button id="btn-next" class="nav-btn">Siguiente Especialidad →</button>
+            </div>
+
+            <div class="gallery-header">
+                <h1 id="gallery-title">Título</h1>
+                <p id="gallery-desc">Descripción</p>
+            </div>
+
+            <!-- Aquí se inyectarán las fotos desde el JavaScript -->
+            <div class="static-gallery" id="gallery-images"></div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
