@@ -1,0 +1,250 @@
+// --- TRADUCCIÓN ---
+const langButtons = document.querySelectorAll('.lang-btn');
+const aboutTitle = document.getElementById('about-title');
+const aboutText = document.getElementById('about-text');
+const contactTitle = document.getElementById('contact-title');
+const contactDesc = document.getElementById('contact-desc');
+const whereTitle = document.getElementById('where-title');
+const whereText = document.getElementById('where-text');
+const scheduleTitle = document.getElementById('schedule-title');
+const scheduleText = document.getElementById('schedule-text');
+const whatsappBtnText = document.getElementById('whatsapp-btn-text');
+const igBtnText = document.getElementById('ig-btn-text');
+const proteamTitle = document.getElementById('proteam-title');
+const proteamDesc = document.getElementById('proteam-desc');
+const specialtiesTitle = document.getElementById('specialties-title');
+const specialtiesDesc = document.getElementById('specialties-desc');
+const style1 = document.getElementById('style-1');
+const style2 = document.getElementById('style-2');
+const style3 = document.getElementById('style-3');
+const projectsTitle = document.getElementById('projects-title');
+const projectsDesc = document.getElementById('projects-desc');
+
+// Botones de la galería
+const btnBack = document.getElementById('btn-back');
+const btnNext = document.getElementById('btn-next');
+
+const texts = {
+    esp: {
+        aboutTitle: "El Estudio",
+        aboutText: "Soy Cristina Marin, la artista detrás de Blonde Tattoo en Figueres. Me especializo en diseños únicos, prestando atención a cada detalle para que tu idea se convierta en una obra de arte en tu piel. Trabajo con las mejores medidas de higiene y un trato 100% personalizado para cada cliente.",
+        contactTitle: "Pásate por el estudio",
+        contactDesc: "La mejor forma de empezar tu próximo tatuaje es viéndonos en persona. Hablemos de tu idea, medidas y referencias.",
+        whereTitle: "📍 Dónde estoy:",
+        whereText: "C/ Sant Pau, 82, Figueres",
+        scheduleTitle: "🕒 Horario:",
+        scheduleText: "Lunes a Sábado: 10:00 - 19:30",
+        whatsappBtnText: "Contactar por WhatsApp",
+        igBtnText: "Ver trabajos en Instagram",
+        proteamTitle: "Pro Team & Sponsors",
+        proteamDesc: "Trabajo exclusivamente con los mejores materiales del sector para garantizar resultados perfectos en tu piel.",
+        specialtiesTitle: "Especialidades",
+        specialtiesDesc: "Explora mis diferentes estilos de trabajo",
+        style1: "Fine Line",
+        style2: "Microrealismo",
+        style3: "Full Color",
+        projectsTitle: "Últimos Proyectos",
+        projectsDesc: "Haz clic o toca para pausar/reanudar",
+        btnBack: "← Volver al Inicio",
+        btnNext: "Siguiente Especialidad →"
+    },
+    cat: {
+        aboutTitle: "L'Estudi",
+        aboutText: "Sóc Cristina Marin, l'artista darrere de Blonde Tattoo a Figueres. M'especialitzo en dissenys únics, parant atenció a cada detall perquè la teva idea es converteixi en una obra d'art a la teva pell. Treballo amb les millors mesures d'higiene i un tracte 100% personalitzat per a cada client.",
+        contactTitle: "Passa't per l'estudi",
+        contactDesc: "La millor manera de començar el teu proper tatuatge és veient-nos en persona. Parlem de la teva idea, mides i referències.",
+        whereTitle: "📍 On sóc:",
+        whereText: "C/ Sant Pau, 82, Figueres",
+        scheduleTitle: "🕒 Horari:",
+        scheduleText: "Dilluns a Dissabte: 10:00 - 19:30",
+        whatsappBtnText: "Contactar per WhatsApp",
+        igBtnText: "Veure treballs a Instagram",
+        proteamTitle: "Pro Team & Sponsors",
+        proteamDesc: "Treballo exclusivament amb els millors materials del sector per garantir resultats perfectes a la teva pell.",
+        specialtiesTitle: "Especialitats",
+        specialtiesDesc: "Explora els meus diferents estils de treball",
+        style1: "Fine Line",
+        style2: "Microrealisme",
+        style3: "Full Color",
+        projectsTitle: "Últims Projectes",
+        projectsDesc: "Fes clic o toca per pausar/reprendre",
+        btnBack: "← Tornar a l'Inici",
+        btnNext: "Següent Especialitat →"
+    },
+    ing: {
+        aboutTitle: "The Studio",
+        aboutText: "I'm Cristina Marin, the artist behind Blonde Tattoo in Figueres. I specialize in unique designs, paying attention to every detail so that your idea becomes a piece of art on your skin. I work with the highest hygiene standards and 100% personalized attention for each client.",
+        contactTitle: "Stop by the studio",
+        contactDesc: "The best way to start your next tattoo is by meeting in person. Let's discuss your idea, sizing, and references.",
+        whereTitle: "📍 Where I am:",
+        whereText: "C/ Sant Pau, 82, Figueres",
+        scheduleTitle: "🕒 Hours:",
+        scheduleText: "Monday to Saturday: 10:00 AM - 7:30 PM",
+        whatsappBtnText: "Contact via WhatsApp",
+        igBtnText: "View work on Instagram",
+        proteamTitle: "Pro Team & Sponsors",
+        proteamDesc: "I work exclusively with the best materials in the industry to guarantee perfect results on your skin.",
+        specialtiesTitle: "Specialties",
+        specialtiesDesc: "Explore my different working styles",
+        style1: "Fine Line",
+        style2: "Microrealism",
+        style3: "Full Color",
+        projectsTitle: "Latest Projects",
+        projectsDesc: "Click or tap to pause/resume",
+        btnBack: "← Back to Home",
+        btnNext: "Next Specialty →"
+    }
+};
+
+langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const lang = btn.getAttribute('data-lang');
+        
+        if(aboutTitle) aboutTitle.textContent = texts[lang].aboutTitle;
+        if(aboutText) aboutText.textContent = texts[lang].aboutText;
+        if(contactTitle) contactTitle.textContent = texts[lang].contactTitle;
+        if(contactDesc) contactDesc.textContent = texts[lang].contactDesc;
+        if(whereTitle) whereTitle.textContent = texts[lang].whereTitle;
+        if(whereText) whereText.textContent = texts[lang].whereText;
+        if(scheduleTitle) scheduleTitle.textContent = texts[lang].scheduleTitle;
+        if(scheduleText) scheduleText.textContent = texts[lang].scheduleText;
+        if(whatsappBtnText) whatsappBtnText.textContent = texts[lang].whatsappBtnText;
+        if(igBtnText) igBtnText.textContent = texts[lang].igBtnText;
+        if(proteamTitle) proteamTitle.textContent = texts[lang].proteamTitle;
+        if(proteamDesc) proteamDesc.textContent = texts[lang].proteamDesc;
+        if(specialtiesTitle) specialtiesTitle.textContent = texts[lang].specialtiesTitle;
+        if(specialtiesDesc) specialtiesDesc.textContent = texts[lang].specialtiesDesc;
+        if(style1) style1.textContent = texts[lang].style1;
+        if(style2) style2.textContent = texts[lang].style2;
+        if(style3) style3.textContent = texts[lang].style3;
+        if(projectsTitle) projectsTitle.textContent = texts[lang].projectsTitle;
+        if(projectsDesc) projectsDesc.textContent = texts[lang].projectsDesc;
+        
+        // Botones galería
+        if(btnBack) btnBack.textContent = texts[lang].btnBack;
+        if(btnNext) btnNext.textContent = texts[lang].btnNext;
+    });
+});
+
+// --- CARRUSEL ---
+const carousel = document.getElementById('carousel');
+if (carousel) {
+    const cards = document.querySelectorAll('.project-card');
+    let isPaused = false;
+
+    function autoScroll() {
+        if (!isPaused) {
+            carousel.scrollLeft += 1;
+            if (carousel.scrollLeft >= (carousel.scrollWidth - carousel.clientWidth - 1)) {
+                carousel.scrollLeft = 0;
+            }
+        }
+    }
+    setInterval(autoScroll, 25);
+
+    carousel.addEventListener('click', () => {
+        isPaused = !isPaused;
+        cards.forEach(card => {
+            if (isPaused) card.classList.add('is-paused');
+            else card.classList.remove('is-paused');
+        });
+    });
+}
+
+// --- LÓGICA DE GALERÍAS (SINGLE PAGE) ---
+const homeView = document.getElementById('home-view');
+const galleryView = document.getElementById('gallery-view');
+const galleryTitle = document.getElementById('gallery-title');
+const galleryDesc = document.getElementById('gallery-desc');
+const galleryImages = document.getElementById('gallery-images');
+const galleryLinks = document.querySelectorAll('.style-card-link');
+
+// Base de datos de las galerías
+const galleriesData = {
+    fineline: {
+        title: "Fine Line",
+        desc: "Trazos finos, delicados y elegantes. Precisión en cada detalle.",
+        next: "microrealismo",
+        images: [
+            "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1611501271487-ea953ebbb7db?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=600&q=80"
+        ]
+    },
+    microrealismo: {
+        title: "Microrealismo",
+        desc: "Detalles hiperrealistas en pequeño y mediano formato.",
+        next: "fullcolor",
+        images: [
+            "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1589993358327-0466dfbfd6bc?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=600&q=80"
+        ]
+    },
+    fullcolor: {
+        title: "Full Color",
+        desc: "Colores vibrantes, sólidos y duraderos que cobran vida en tu piel.",
+        next: "fineline",
+        images: [
+            "https://images.unsplash.com/photo-1589993358327-0466dfbfd6bc?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1611501271487-ea953ebbb7db?auto=format&fit=crop&w=600&q=80"
+        ]
+    }
+};
+
+let currentGallery = "";
+
+// Función para abrir la galería
+function openGallery(galleryId) {
+    const data = galleriesData[galleryId];
+    if (!data) return;
+
+    currentGallery = galleryId;
+    
+    // Rellenar textos
+    galleryTitle.textContent = data.title;
+    galleryDesc.textContent = data.desc;
+
+    // Rellenar fotos
+    galleryImages.innerHTML = ""; // Limpia las anteriores
+    data.images.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = data.title;
+        galleryImages.appendChild(img);
+    });
+
+    // Ocultar inicio, mostrar galería
+    homeView.classList.add("hidden");
+    galleryView.classList.remove("hidden");
+    
+    // Subir arriba de la pantalla
+    window.scrollTo(0, 0);
+}
+
+// Al hacer clic en una especialidad
+galleryLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const galleryId = link.getAttribute('data-gallery');
+        openGallery(galleryId);
+    });
+});
+
+// Botón de Volver al Inicio
+btnBack.addEventListener('click', () => {
+    galleryView.classList.add("hidden");
+    homeView.classList.remove("hidden");
+    window.scrollTo(0, 0);
+});
+
+// Botón de Siguiente
+btnNext.addEventListener('click', () => {
+    const nextGallery = galleriesData[currentGallery].next;
+    openGallery(nextGallery);
+});
+
